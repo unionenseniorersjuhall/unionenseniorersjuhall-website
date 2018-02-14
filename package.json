@@ -1,0 +1,15 @@
+{
+  "name": "unionen-seniorer-sjuhall-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Website of Unionen Seniorer Sjuhall",
+  "scripts": {
+    "start": "node dev.js",
+    "build": "node index.js"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "fs-extra": "^5.0.0",
+    "meta-marked": "^0.4.2"
+  }
+}
