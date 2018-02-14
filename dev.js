@@ -3,7 +3,7 @@ const build = require('./lib/build');
 
 build();
 
-bs.init({ server: './dist' });
+bs.init({ server: './public' });
 
 bs.watch('_pages/*.md', function (event, file) {
   if (event === 'change') {
