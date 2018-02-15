@@ -6,7 +6,7 @@ media_folder: "images/uploads" # Media files will be stored in the repo under im
 collections:
   - name: "page" # Used in routes, e.g., /admin/collections/blog
     label: "Page" # Used in the UI
-    folder: "_pages" # The path to the folder where the documents are stored
+    folder: "data/_pages" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -20,8 +20,8 @@ collections:
       preview: false
     files:
       - name: "general"
-        label: "Site Settings"
-        file: "_settings/general.json"
+        label: "General"
+        file: "data/_settings/general.json"
         description: "General Site Settings"
         fields:
           - {label: "Website title", name: "site_title", widget: "string"}
