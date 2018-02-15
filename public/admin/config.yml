@@ -13,3 +13,15 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "settings"
+    label: "Settings"
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - name: "general"
+        label: "Site Settings"
+        file: "_settings/general.json"
+        description: "General Site Settings"
+        fields:
+          - {label: "Global title", name: "site_title", widget: "string"}
