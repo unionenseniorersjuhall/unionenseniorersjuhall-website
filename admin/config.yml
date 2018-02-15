@@ -24,4 +24,4 @@ collections:
         file: "_settings/general.json"
         description: "General Site Settings"
         fields:
-          - {label: "Global title", name: "site_title", widget: "string"}
+          - {label: "Website title", name: "site_title", widget: "string"}
