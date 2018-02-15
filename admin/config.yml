@@ -22,6 +22,8 @@ collections:
       - name: "general"
         label: "General"
         file: "data/_settings/general.json"
+        extension: json
+        format: json
         description: "General Site Settings"
         fields:
           - {label: "Website title", name: "site_title", widget: "string"}
