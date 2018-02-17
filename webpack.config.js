@@ -41,7 +41,6 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: 'admin/**', context: 'src/' },
-      { from: 'data/**', context: 'src/' },
     ], { copyUnmodified: true }),
   ],
 };
