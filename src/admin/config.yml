@@ -16,23 +16,23 @@ collections:
         fields: # The fields for each document, usually in front matter
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-  - name: "test" # Used in routes, e.g., /admin/collections/blog
-    label: "test" # Used in the UI
+  - name: "testparent" # Used in routes, e.g., /admin/collections/blog
+    label: "testparent" # Used in the UI
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: false
     files:
       - name: "test"
       - label: "test"
-        file: "src/data/_test/test.json" # The path to the folder where the documents are stored
+        file: "src/data/_testparent/test.json" # The path to the folder where the documents are stored
         extension: json
         format: json
         description: "General Site Settings"
         fields: # The fields for each document, usually in front matter
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
-  - name: "test2" # Used in routes, e.g., /admin/collections/blog
-    label: "test2" # Used in the UI
+  - name: "test2parent" # Used in routes, e.g., /admin/collections/blog
+    label: "test2parent" # Used in the UI
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: false
