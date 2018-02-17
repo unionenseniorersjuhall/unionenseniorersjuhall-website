@@ -27,4 +27,4 @@ collections:
         description: "General Site Settings"
         fields:
           - {label: "Website title", name: "site_title", widget: "string"}
-          - {label: "Homepage", name: "homepage", widget: "relation", collection: "page", searchFields: ["title"], valueField: "name" }
+          - {label: "Homepage", name: "homepage", widget: "relation", collection: "page", searchFields: ["name", "title"], valueField: "name" }
