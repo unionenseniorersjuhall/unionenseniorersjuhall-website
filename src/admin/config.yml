@@ -13,6 +13,18 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "page"
+    label: "Page"
+    delete: false # Prevent users from deleting documents in this collection
+    files:
+      - name: "home"
+        label: "Home"
+        file: "src/data/_pages/home.md"
+        description: "Homepage"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "homepage"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
   - name: "settings"
     label: "Settings"
     delete: false # Prevent users from deleting documents in this collection
@@ -27,4 +39,3 @@ collections:
         description: "General Site Settings"
         fields:
           - {label: "Website title", name: "site_title", widget: "string"}
-          - {label: "Homepage", name: "homepage", widget: "relation", collection: "page", searchFields: ["name", "title"], valueField: "title" }
