@@ -23,7 +23,7 @@ collections:
     delete: false # Prevent users from deleting documents in this collection
     files:
       - name: "homepagetest"
-      - label: "Homepage"
+        label: "Homepage"
         file: "src/data/_homepage/homepagetest.md" # The path to the folder where the documents are stored
         extension: md
         format: yml
