@@ -4,59 +4,15 @@ backend:
 media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
 
 collections:
-  - name: "settings2"
-    label: "Settings2"
-    delete: false # Prevent users from deleting documents in this collection
-    editor:
-      preview: false
-    files:
-      - name: "settings2"
-        label: "Settings2"
-        file: "src/data/_settings2/settings2.md"
-        extension: md
-        format: yml
-        description: "General Site Settings2"
-        fields:
-          - {label: "Website title2", name: "site_title", widget: "string"}
   - name: "homepage" # Used in routes, e.g., /admin/collections/blog
     label: "Homepage" # Used in the UI
     delete: false # Prevent users from deleting documents in this collection
     files:
-      - name: "homepagetest"
+      - name: "homepage"
         label: "Homepage"
-        file: "src/data/_homepage/homepagetest.md" # The path to the folder where the documents are stored
-        extension: md
-        format: yml
-        fields: # The fields for each document, usually in front matter
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-  - name: "testparent" # Used in routes, e.g., /admin/collections/blog
-    label: "testparent" # Used in the UI
-    delete: false # Prevent users from deleting documents in this collection
-    editor:
-      preview: false
-    files:
-      - name: "test"
-      - label: "test"
-        file: "src/data/_testparent/test.json" # The path to the folder where the documents are stored
+        file: "src/data/_homepage/homepage.json" # The path to the folder where the documents are stored
         extension: json
         format: json
-        description: "General Site Settings"
-        fields: # The fields for each document, usually in front matter
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
-  - name: "test2parent" # Used in routes, e.g., /admin/collections/blog
-    label: "test2parent" # Used in the UI
-    delete: false # Prevent users from deleting documents in this collection
-    editor:
-      preview: false
-    files:
-      - name: "test2"
-      - label: "test2"
-        file: "src/data/_test2/test2.md" # The path to the folder where the documents are stored
-        extension: md
-        format: yml
-        description: "General Site Settings"
         fields: # The fields for each document, usually in front matter
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
