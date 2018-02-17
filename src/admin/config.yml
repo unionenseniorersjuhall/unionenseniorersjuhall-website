@@ -19,24 +19,30 @@ collections:
   - name: "test" # Used in routes, e.g., /admin/collections/blog
     label: "test" # Used in the UI
     delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
     files:
       - name: "test"
       - label: "test"
         file: "src/data/_test/test.json" # The path to the folder where the documents are stored
         extension: json
         format: json
+        description: "General Site Settings"
         fields: # The fields for each document, usually in front matter
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
   - name: "test2" # Used in routes, e.g., /admin/collections/blog
     label: "test2" # Used in the UI
     delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
     files:
       - name: "test2"
       - label: "test2"
         file: "src/data/_test2/test2.md" # The path to the folder where the documents are stored
         extension: md
         format: yml
+        description: "General Site Settings"
         fields: # The fields for each document, usually in front matter
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
