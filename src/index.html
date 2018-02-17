@@ -7,8 +7,14 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  {{content}}
   <script>
+    window.__PRELOADED_STATE__ = <%= JSON.stringify(htmlWebpackPlugin.options.preloadedState).replace(/</g, "\\u003c") %>;
+  </script>
+  <div id="root">
+    <noscript>You need to activate Javascript to view this website</noscript>
+  </div>
+  <script>
+    // move this
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
         if (!user) {

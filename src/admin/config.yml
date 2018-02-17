@@ -4,7 +4,7 @@ backend:
 media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
 
 collections:
-  - name: "pages" # Used in routes, e.g., /admin/collections/blog
+  - name: "page" # Used in routes, e.g., /admin/collections/blog
     label: "Page" # Used in the UI
     folder: "data/_pages" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
@@ -27,3 +27,4 @@ collections:
         description: "General Site Settings"
         fields:
           - {label: "Website title", name: "site_title", widget: "string"}
+          - {label: "Homepage", name: "homepage", widget: "relation", collection: "page", searchFields: ["title"], valueField: "name" }
