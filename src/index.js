@@ -12,7 +12,7 @@ const App = (
     <PageWrapper>
       <Switch>
         <Route exact path="/" render={() => CmsContent(window.__PRELOADED_STATE__.homepage)} />
-        {window.__PRELOADED_STATE__.pages.map((page) => <Route exact path={page.route} render={() => CmsContent(page)} />)}
+        {window.__PRELOADED_STATE__.pages.map((page) => <Route key={page.route} exact path={page.route} render={() => CmsContent(page)} />)}
         <Route component={NotFound} />
       </Switch>
     </PageWrapper>

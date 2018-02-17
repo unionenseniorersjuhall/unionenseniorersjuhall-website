@@ -3,16 +3,10 @@ import { Link } from 'react-router-dom';
 
 export default function Navigation() {
   return (
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/om-oss">Om oss</Link>
-      </li>
-      <li>
-        <Link to="/kontakt">Kontakt</Link>
-      </li>
-    </ul>
+    <nav className="navigation">
+      <Link className="navigation__link" to="/">Home</Link>
+      <Link className="navigation__link" to="/om-oss">Om oss</Link>
+      <Link className="navigation__link" to="/kontakt">Kontakt</Link>
+    </nav>
   );
 }

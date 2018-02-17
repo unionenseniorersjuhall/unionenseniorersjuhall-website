@@ -1,0 +1,12 @@
+.navigation {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #1c821d;
+}
+
+.navigation__link {
+  padding: 10px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
