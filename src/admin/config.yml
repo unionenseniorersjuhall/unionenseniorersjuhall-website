@@ -22,6 +22,7 @@ collections:
         fields:
           - {label: "Layout", name: "layout", widget: "hidden", default: "homepage"}
           - {label: "Title", name: "title", widget: "string"}
+          - {label: "Title2", name: "title2", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
   - name: "settings"
     label: "Settings"
