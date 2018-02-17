@@ -74,9 +74,9 @@ collections:
     editor:
       preview: false
     files:
-      - name: "general2"
-        label: "General2"
-        file: "src/data/_settings2/general2.json"
+      - name: "settings2"
+        label: "Settings2"
+        file: "src/data/_settings2/settings2.json"
         extension: json
         format: json
         description: "General Site Settings2"
