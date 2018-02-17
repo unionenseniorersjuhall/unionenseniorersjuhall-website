@@ -47,6 +47,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: 'admin/**', context: 'src/' },
       { from: 'uploads/**', to: 'images/', context: 'src/data/' },
+      { from: '_redirects' },
     ], { copyUnmodified: true }),
   ],
 };
