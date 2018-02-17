@@ -41,6 +41,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       preloadedState: getPreloadedState(),
+      title: getPreloadedState().settings.site_title,
     }),
     new ExtractTextPlugin('styles.css'),
     new CopyWebpackPlugin([
