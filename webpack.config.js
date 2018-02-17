@@ -39,6 +39,9 @@ module.exports = {
       template: 'src/index.html',
       preloadedState: getPreloadedState(),
     }),
-    new CopyWebpackPlugin([{ from: 'src/admin/config.yml', to: 'admin/config.yml' }], { copyUnmodified: true }),
+    new CopyWebpackPlugin([
+      { from: 'admin/config.yml', to: 'admin/config.yml', context: 'src/' },
+      { from: 'data/**', context: 'src/' },
+    ], { copyUnmodified: true }),
   ],
 };
