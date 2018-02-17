@@ -8,9 +8,9 @@ collections:
     label: "Homepage" # Used in the UI
     delete: false # Prevent users from deleting documents in this collection
     files:
-      - name: "homepage"
+      - name: "homepagetest"
       - label: "Homepage"
-        file: "src/data/_homepage/homepage.md" # The path to the folder where the documents are stored
+        file: "src/data/_homepage/homepagetest.md" # The path to the folder where the documents are stored
         extension: md
         format: yml
         fields: # The fields for each document, usually in front matter
