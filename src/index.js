@@ -11,7 +11,8 @@ const App = (
   <BrowserRouter>
     <PageWrapper>
       <Switch>
-        {window.__PRELOADED_STATE__.pages.map((page) => <Route exact path={page.route} component={CmsContent} />)}
+        <Route exact path="/" render={() => CmsContent(window.__PRELOADED_STATE__.homepage)} />
+        {window.__PRELOADED_STATE__.pages.map((page) => <Route exact path={page.route} render={() => CmsContent(page)} />)}
         <Route component={NotFound} />
       </Switch>
     </PageWrapper>
