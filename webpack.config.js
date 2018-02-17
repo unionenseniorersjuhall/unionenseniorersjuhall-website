@@ -46,7 +46,7 @@ module.exports = {
     new ExtractTextPlugin('styles.css'),
     new CopyWebpackPlugin([
       { from: 'admin/**', context: 'src/' },
-      { from: 'data/uploads/**', context: 'src/' },
+      { from: 'images/uploads/**', context: 'src/data/' },
     ], { copyUnmodified: true }),
   ],
 };
