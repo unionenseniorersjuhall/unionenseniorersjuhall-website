@@ -12,9 +12,9 @@ collections:
     files:
       - name: "settings2"
         label: "Settings2"
-        file: "src/data/_settings2/settings2.json"
-        extension: json
-        format: json
+        file: "src/data/_settings2/settings2.md"
+        extension: md
+        format: yml
         description: "General Site Settings2"
         fields:
           - {label: "Website title2", name: "site_title", widget: "string"}
