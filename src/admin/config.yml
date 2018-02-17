@@ -68,3 +68,17 @@ collections:
         description: "General Site Settings"
         fields:
           - {label: "Website title", name: "site_title", widget: "string"}
+  - name: "settings2"
+    label: "Settings2"
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - name: "general2"
+        label: "General2"
+        file: "src/data/_settings2/general2.json"
+        extension: json
+        format: json
+        description: "General Site Settings2"
+        fields:
+          - {label: "Website title2", name: "site_title", widget: "string"}
