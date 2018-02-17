@@ -40,7 +40,7 @@ module.exports = {
       preloadedState: getPreloadedState(),
     }),
     new CopyWebpackPlugin([
-      { from: 'admin/config.yml', to: 'admin/config.yml', context: 'src/' },
+      { from: 'admin/**', context: 'src/' },
       { from: 'data/**', context: 'src/' },
     ], { copyUnmodified: true }),
   ],
