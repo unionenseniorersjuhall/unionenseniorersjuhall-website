@@ -4,6 +4,7 @@ const metaMarked = require('meta-marked');
 
 function getPreloadedState() {
   const settings = require(path.resolve('./src/data/_settings/general.json'));
+  const homepage = metaMarked(fs.readFileSync(path.resolve('./src/data/_homepage/homepage.md')).toString());
   const pages = fs.readdirSync(path.resolve('./src/data/_pages'))
     .map(filename => filename.replace('.md', ''))
     .map((page) => {
@@ -18,6 +19,10 @@ function getPreloadedState() {
     });
 
   return ({
+    homepage: {
+      data: homepage.data,
+      html: homepage.html,
+    },
     pages,
     settings,
   });
