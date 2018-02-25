@@ -5,18 +5,36 @@ media_folder: "src/data/uploads" # Media files will be stored in the repo under 
 public_folder: "/images/uploads" # Media files will be stored in the repo under images/uploads
 
 collections:
-  - name: "homepage" # Used in routes, e.g., /admin/collections/blog
-    label: "Homepage" # Used in the UI
+  - name: "hem" # Used in routes, e.g., /admin/collections/blog
+    label: "Hem" # Used in the UI
     delete: false # Prevent users from deleting documents in this collection
     files:
-      - name: "homepage"
-        label: "Homepage"
-        file: "src/data/_homepage/homepage.json" # The path to the folder where the documents are stored
+      - name: "hem"
+        label: "Hem"
+        file: "src/data/_hem/hem.json" # The path to the folder where the documents are stored
         extension: json
         format: json
         fields: # The fields for each document, usually in front matter
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Text", name: "body", widget: "markdown"}
+  - name: "program" # Used in routes, e.g., /admin/collections/blog
+    label: "Program" # Used in the UI
+    delete: false # Prevent users from deleting documents in this collection
+    files:
+      - name: "program"
+        label: "Program"
+        file: "src/data/_program/program.json" # The path to the folder where the documents are stored
+        extension: json
+        format: json
+        fields: # The fields for each document, usually in front matter
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Text", name: "body", widget: "markdown"}
+          - label: "Program"
+            name: "program"
+            widget: "list"
+            fields:
+            - {label: "Titel", name: "title", widget: "string"}
+            - {label: "PDF", name: "file", widget: "file"}
   - name: "page" # Used in routes, e.g., /admin/collections/blog
     label: "Page" # Used in the UI
     folder: "src/data/_pages" # The path to the folder where the documents are stored
