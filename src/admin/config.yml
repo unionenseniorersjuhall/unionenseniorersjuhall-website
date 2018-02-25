@@ -28,13 +28,44 @@ collections:
         format: json
         fields: # The fields for each document, usually in front matter
           - {label: "Titel", name: "title", widget: "string"}
-          - {label: "Text", name: "body", widget: "markdown"}
           - label: "Program"
             name: "program"
             widget: "list"
             fields:
             - {label: "Titel", name: "title", widget: "string"}
             - {label: "PDF", name: "file", widget: "file"}
+  - name: "bildgalleri" # Used in routes, e.g., /admin/collections/blog
+    label: "Bildgalleri" # Used in the UI
+    folder: "src/data/_bildgalleri" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    extension: json
+    format: json
+    fields:
+      - name: "galleri"
+        label: "Galleri"
+        extension: json
+        format: json
+        fields: # The fields for each document, usually in front matter
+          - {label: "Titel för galleri", name: "title", widget: "string"}
+          - label: "Bilder"
+            name: "bilder"
+            widget: "list"
+            fields:
+            - {label: "Titel", name: "title", widget: "string"}
+            - {label: "Bild", name: "image", widget: "image"}
+  - name: "kontakta-oss" # Used in routes, e.g., /admin/collections/blog
+    label: "Kontakta Oss" # Used in the UI
+    delete: false # Prevent users from deleting documents in this collection
+    files:
+      - name: "kontakta-oss"
+        label: "Kontakta Oss"
+        file: "src/data/_kontakta-oss/kontakta-oss.json" # The path to the folder where the documents are stored
+        extension: json
+        format: json
+        fields: # The fields for each document, usually in front matter
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Text", name: "body", widget: "markdown"}
   - name: "page" # Used in routes, e.g., /admin/collections/blog
     label: "Page" # Used in the UI
     folder: "src/data/_pages" # The path to the folder where the documents are stored
