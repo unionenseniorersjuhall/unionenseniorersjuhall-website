@@ -42,18 +42,13 @@ collections:
     extension: json
     format: json
     fields:
-      - name: "galleri"
-        label: "Galleri"
-        extension: json
-        format: json
-        fields: # The fields for each document, usually in front matter
-          - {label: "Titel för galleri", name: "title", widget: "string"}
-          - label: "Bilder"
-            name: "bilder"
-            widget: "list"
-            fields:
-            - {label: "Titel", name: "title", widget: "string"}
-            - {label: "Bild", name: "image", widget: "image"}
+      - {label: "Titel för galleri", name: "title", widget: "string"}
+      - label: "Bilder"
+        name: "bilder"
+        widget: "list"
+        fields:
+        - {label: "Titel", name: "title", widget: "string"}
+        - {label: "Bild", name: "image", widget: "image"}
   - name: "kontakta-oss" # Used in routes, e.g., /admin/collections/blog
     label: "Kontakta Oss" # Used in the UI
     delete: false # Prevent users from deleting documents in this collection
