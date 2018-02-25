@@ -1,11 +1,11 @@
 import React from 'react';
-import Navigation from '../navigation';
+import Header from '../header';
 import Footer from '../footer';
 
 export default function PageWrapper({ children }) {
   return (
     <div className="page-wrapper">
-      <Navigation />
+      <Header />
       {children}
       <Footer />
     </div>

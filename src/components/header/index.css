@@ -1,0 +1,17 @@
+.header {
+  padding-top: 10px;
+  background-color: #1c821d;
+}
+
+.header__inner{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header__link {
+  text-decoration: none;
+}
+
+.header__logo-text {
+  color: #FFFFFF;
+}
