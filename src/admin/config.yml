@@ -47,7 +47,6 @@ collections:
         name: "bilder"
         widget: "list"
         fields:
-        - {label: "Titel", name: "title", widget: "string"}
         - {label: "Bild", name: "image", widget: "image"}
   - name: "kontakta-oss" # Used in routes, e.g., /admin/collections/blog
     label: "Kontakta Oss" # Used in the UI
