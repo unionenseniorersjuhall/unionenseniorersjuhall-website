@@ -11,8 +11,10 @@ const App = (
   <BrowserRouter>
     <PageWrapper>
       <Switch>
-        <Route exact path="/" render={() => CmsContent(window.__PRELOADED_STATE__.homepage)} />
-        {window.__PRELOADED_STATE__.pages.map((page) => <Route key={page.route} exact path={page.route} render={() => CmsContent(page)} />)}
+        <Route exact path="/" component={CmsContent} />
+        <Route exact path="/program" component={CmsContent} />
+        <Route exact path="/bildgalleri" component={CmsContent} />
+        <Route exact path="/kontakta-oss" render={() => CmsContent(window.__PRELOADED_STATE__.homepage)} />
         <Route component={NotFound} />
       </Switch>
     </PageWrapper>
