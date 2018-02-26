@@ -1,7 +1,17 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-export default function Program() {
-  return (
-    <h1>Program</h1>
-  );
+function Program({ title, program }) {
+  return Object.keys(program).map((item) => (
+    <div>
+      <a href={item.file}>Ladda ner</a>
+    </div>
+  ));
 }
+
+const mapStateToProps = state => ({
+  title: state.program.title,
+  program: state.program,
+});
+
+export default connect(mapStateToProps)(Program);

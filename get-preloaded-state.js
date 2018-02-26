@@ -1,6 +1,5 @@
 const fs = require('fs-extra');
 const path = require('path');
-const metaMarked = require('meta-marked');
 
 function getFileData(dir) {
   if (dir.endsWith('.json')) {
@@ -18,14 +17,14 @@ function getData(dir) {
   const data = {};
 
   fs.readdirSync(dir).forEach((childDir) => {
-    data[childDir] = getData(childDir);
+    data[childDir.split('.')[0]] = getData(path.join(dir, childDir));
   });
 
   return data;
 }
 
 function getPreloadedState() {
-  return getDataRecursively('./src/data');
+  return getData(path.join(__dirname, './src/data'));
 /*
   const settings = require('./src/data/_settings/general.json');
   const homepage = require('./src/data/_homepage/homepage.json');

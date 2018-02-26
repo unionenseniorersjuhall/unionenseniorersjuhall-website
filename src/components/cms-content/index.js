@@ -1,10 +1,11 @@
 import React from 'react';
+import ReactMarkdown from 'react-markdown';
 
-export default function CmsContent(props) {
+export default function CmsContent({ title, children }) {
   return (
     <div className="cms-content">
-      <h1>{props.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: props.body }} />
+      <h1>{title}</h1>
+      <ReactMarkdown source={children} />
     </div>
   );
 }
