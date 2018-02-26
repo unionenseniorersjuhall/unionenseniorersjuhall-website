@@ -1,7 +1,19 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-export default function Bildgalleri() {
-  return (
-    <h1>Bildgalleri</h1>
-  );
+function Bildgalleri({ galleries }) {
+  return Object.entries(galleries).map(([key, object]) => (
+    <div>
+      <h3>{object.title}</h3>
+      {object.bilder.map(img => (
+        <img src={img.image} />
+      ))}
+    </div>
+  ));
 }
+
+const mapStateToProps = state => ({
+  galleries: state.galleries,
+});
+
+export default connect(mapStateToProps)(Bildgalleri);

@@ -2,10 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 function Program({ program }) {
-  return Object.entries(program).map(([title, item]) => (
+  return Object.entries(program).map(([key, object]) => (
     <div>
-      <h3>{title}</h3>
-      <a href={item.file} download>Ladda ner</a>
+      <h3>{object.title}</h3>
+      <a href={object.file} download>Ladda ner</a>
     </div>
   ));
 }
