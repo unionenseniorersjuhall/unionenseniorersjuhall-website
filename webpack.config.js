@@ -41,12 +41,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       preloadedState: getPreloadedState(),
-      title: getPreloadedState().settings.site_title,
+      title: 'Unionen Seniorer Sjuhall',
     }),
     new ExtractTextPlugin('styles.css'),
     new CopyWebpackPlugin([
       { from: 'admin/**', context: 'src/' },
-      { from: 'uploads/**', to: 'images/', context: 'src/data/' },
+      { from: 'uploads/**', to: 'images/uploads/', context: 'src/assets/' },
       { from: '_redirects' },
     ], { copyUnmodified: true }),
   ],

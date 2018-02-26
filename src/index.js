@@ -3,7 +3,10 @@ import { render } from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PageWrapper from './components/page-wrapper';
 import NotFound from './components/not-found';
-import CmsContent from './components/cms-content';
+import Hem from './pages/hem';
+import Program from './pages/program';
+import Bildgalleri from './pages/bildgalleri';
+import KontaktaOss from './pages/kontakta-oss';
 
 import './assets/styles/index.css';
 
@@ -11,10 +14,10 @@ const App = (
   <BrowserRouter>
     <PageWrapper>
       <Switch>
-        <Route exact path="/" component={CmsContent} />
-        <Route exact path="/program" component={CmsContent} />
-        <Route exact path="/bildgalleri" component={CmsContent} />
-        <Route exact path="/kontakta-oss" render={() => CmsContent(window.__PRELOADED_STATE__.homepage)} />
+        <Route exact path="/" component={Hem} />
+        <Route exact path="/program" component={Program} />
+        <Route exact path="/bildgalleri" component={Bildgalleri} />
+        <Route exact path="/kontakta-oss" render={KontaktaOss} />
         <Route component={NotFound} />
       </Switch>
     </PageWrapper>

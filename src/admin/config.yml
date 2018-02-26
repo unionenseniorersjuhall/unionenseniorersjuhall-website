@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
 
-media_folder: "src/data/uploads" # Media files will be stored in the repo under images/uploads
+media_folder: "src/assets/uploads" # Media files will be stored in the repo under images/uploads
 public_folder: "/images/uploads" # Media files will be stored in the repo under images/uploads
 
 collections:
@@ -11,7 +11,7 @@ collections:
     files:
       - name: "hem"
         label: "Hem"
-        file: "src/data/_hem/hem.json" # The path to the folder where the documents are stored
+        file: "src/data/hem/data.json" # The path to the folder where the documents are stored
         extension: json
         format: json
         fields: # The fields for each document, usually in front matter
@@ -19,7 +19,7 @@ collections:
           - {label: "Text", name: "body", widget: "markdown"}
   - name: "program" # Used in routes, e.g., /admin/collections/blog
     label: "Program" # Used in the UI
-    folder: "src/data/_program" # The path to the folder where the documents are stored
+    folder: "src/data/program" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     extension: json
@@ -29,7 +29,7 @@ collections:
       - {label: "PDF", name: "file", widget: "file"}
   - name: "bildgalleri" # Used in routes, e.g., /admin/collections/blog
     label: "Bildgalleri" # Used in the UI
-    folder: "src/data/_bildgalleri" # The path to the folder where the documents are stored
+    folder: "src/data/bildgalleri" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     extension: json
@@ -46,7 +46,7 @@ collections:
     files:
       - name: "kontakta-oss"
         label: "Kontakta Oss"
-        file: "src/data/_kontakta-oss/kontakta-oss.json" # The path to the folder where the documents are stored
+        file: "src/data/kontakta-oss/data.json" # The path to the folder where the documents are stored
         extension: json
         format: json
         fields: # The fields for each document, usually in front matter
@@ -54,7 +54,7 @@ collections:
           - {label: "Text", name: "body", widget: "markdown"}
   - name: "page" # Used in routes, e.g., /admin/collections/blog
     label: "Page" # Used in the UI
-    folder: "src/data/_pages" # The path to the folder where the documents are stored
+    folder: "src/data/pages" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     extension: json
@@ -70,7 +70,7 @@ collections:
     files:
       - name: "general"
         label: "General"
-        file: "src/data/_settings/general.json"
+        file: "src/data/settings/general.json"
         extension: json
         format: json
         description: "General Site Settings"

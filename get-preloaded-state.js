@@ -2,7 +2,31 @@ const fs = require('fs-extra');
 const path = require('path');
 const metaMarked = require('meta-marked');
 
+function getFileData(dir) {
+  if (dir.endsWith('.json')) {
+    return require(dir);
+  }
+
+  return {};
+}
+
+function getData(dir) {
+  if (fs.statSync(dir).isFile()) {
+    return getFileData(dir);
+  }
+
+  const data = {};
+
+  fs.readdirSync(dir).forEach((childDir) => {
+    data[childDir] = getData(childDir);
+  });
+
+  return data;
+}
+
 function getPreloadedState() {
+  return getDataRecursively('./src/data');
+/*
   const settings = require('./src/data/_settings/general.json');
   const homepage = require('./src/data/_homepage/homepage.json');
   homepage.body = metaMarked(homepage.body).html;
@@ -17,7 +41,7 @@ function getPreloadedState() {
       return pageData;
     });
 
-  return ({ homepage, pages, settings });
+  return ({ homepage, pages, settings });*/
 }
 
 module.exports = getPreloadedState;
