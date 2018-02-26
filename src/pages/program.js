@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 function Program({ program }) {
-  return Object.keys(program).map((item) => (
+  return Object.entries(program).map(([title, item]) => (
     <div>
       <a href={item.file}>Ladda ner</a>
     </div>
