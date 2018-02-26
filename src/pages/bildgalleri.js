@@ -13,7 +13,7 @@ function Bildgalleri({ galleries }) {
 }
 
 const mapStateToProps = state => ({
-  galleries: state.galleries,
+  galleries: state.bildgalleri,
 });
 
 export default connect(mapStateToProps)(Bildgalleri);
