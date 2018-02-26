@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 function Program({ program }) {
   return Object.entries(program).map(([title, item]) => (
     <div>
-      <a href={item.file}>Ladda ner</a>
+      <h3>{title}</h3>
+      <a href={item.file} download>Ladda ner</a>
     </div>
   ));
 }
