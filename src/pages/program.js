@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-function Program({ title, program }) {
+function Program({ program }) {
   return Object.keys(program).map((item) => (
     <div>
       <a href={item.file}>Ladda ner</a>
@@ -10,7 +10,6 @@ function Program({ title, program }) {
 }
 
 const mapStateToProps = state => ({
-  title: state.program.title,
   program: state.program,
 });
 
