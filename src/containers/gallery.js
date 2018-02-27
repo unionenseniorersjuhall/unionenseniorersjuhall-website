@@ -1,17 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import CmsContent from '../components/cms-content';
+import ImageGallery from '../components/image-gallery';
 
-function ImageGallery({ content, galleries }) {
+function Gallery({ content, galleries }) {
   return (
     <div>
       <CmsContent>{content}</CmsContent>
       {Object.entries(galleries).map(([key, object]) => (
         <div key={key}>
           <h3>{object.title}</h3>
-          {object.images.map(img => (
-            <img style={{ maxWidth: '150px' }} key={img.src} src={img.src} />
-          ))}
+          <ImageGallery images={object.images} />
         </div>
       ))}
     </div>
@@ -23,4 +22,4 @@ const mapStateToProps = state => ({
   content: state.pages.imageGallery.content,
 });
 
-export default connect(mapStateToProps)(ImageGallery);
+export default connect(mapStateToProps)(Gallery);

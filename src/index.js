@@ -6,10 +6,10 @@ import { Provider } from 'react-redux';
 import app from './reducers';
 import PageWrapper from './components/page-wrapper';
 import NotFound from './components/not-found';
-import Home from './pages/home';
-import Program from './pages/program';
-import ImageGallery from './pages/image-gallery';
-import Contact from './pages/contact';
+import Home from './containers/home';
+import Program from './containers/program';
+import Gallery from './containers/gallery';
+import Contact from './containers/contact';
 
 import './assets/styles/index.css';
 
@@ -22,7 +22,7 @@ const App = (
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/program" component={Program} />
-          <Route exact path="/bildgalleri" component={ImageGallery} />
+          <Route exact path="/bildgalleri" component={Gallery} />
           <Route exact path="/kontakta-oss" component={Contact} />
           <Route component={NotFound} />
         </Switch>
