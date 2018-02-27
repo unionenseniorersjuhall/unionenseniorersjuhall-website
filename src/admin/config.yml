@@ -5,6 +5,54 @@ media_folder: "src/assets/uploads" # Media files will be stored in the repo unde
 public_folder: "/images/uploads" # Media files will be stored in the repo under images/uploads
 
 collections:
+  - name: "pages"
+    label: "Sidor"
+    delete: false
+    files:
+      - name: "hem"
+        label: "Hem"
+        file: "src/data/pages/hem.json"
+        extension: json
+        format: json
+        fields:
+          - {label: "Innehåll", name: "body", widget: "markdown"}
+      - name: "program"
+        label: "Program"
+        file: "src/data/pages/program.json"
+        extension: json
+        format: json
+        fields:
+          - {label: "Innehåll", name: "body", widget: "markdown"}
+          - name: "items"
+            label: "Program"
+            widget: "list"
+            fields:
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "PDF", name: "pdf", widget: "file"}
+      - name: "bildgalleri"
+        label: "Bildgalleri"
+        file: "src/data/pages/bildgalleri.json"
+        extension: json
+        format: json
+        fields:
+          - {label: "Innehåll", name: "body", widget: "markdown"}
+          - name: "bilder"
+            label: "Bilder"
+            widget: "list"
+            fields:
+              - {label: "Titel", name: "title", widget: "string"}
+              - name: "bilder"
+                label: "Bilder"
+                widget: "list"
+                field: {label: "Bild", name: "src", widget: "image"}
+      - name: "kontakta-oss"
+        label: "Kontakta oss"
+        file: "src/data/pages/kontakta-oss.json"
+        extension: json
+        format: json
+        fields:
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Innehåll", name: "body", widget: "markdown"}
   - name: "hem" # Used in routes, e.g., /admin/collections/blog
     label: "Hem" # Used in the UI
     delete: false # Prevent users from deleting documents in this collection
