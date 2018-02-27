@@ -1,9 +1,9 @@
 {
-  "body": "# Bildgalleri\n\nHär hittar du lite bilder från våra utflykter",
-  "galleri": [
+  "content": "# Bildgalleri\n\nHär hittar du lite bilder från våra utflykter",
+  "galleries": [
     {
       "title": "Utflykt till Abc",
-      "bilder": [
+      "images": [
         {
           "src": "/images/uploads/image1.png"
         },

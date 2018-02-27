@@ -2,12 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import CmsContent from '../components/cms-content';
 
-function Hem({ body }) {
-  return <CmsContent>{body}</CmsContent>;
+function Home({ content }) {
+  return <CmsContent>{content}</CmsContent>;
 }
 
 const mapStateToProps = state => ({
-  body: state.pages.hem.body,
+  content: state.pages.home.content,
 });
 
-export default connect(mapStateToProps)(Hem);
+export default connect(mapStateToProps)(Home);

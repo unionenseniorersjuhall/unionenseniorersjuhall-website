@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-function Bildgalleri({ galleries }) {
+function ImageGallery({ galleries }) {
   return Object.entries(galleries).map(([key, object]) => (
     <div>
       <h3>{object.title}</h3>
@@ -13,8 +13,8 @@ function Bildgalleri({ galleries }) {
 }
 
 const mapStateToProps = state => ({
-  galleries: state.pages.bildgalleri.galleri,
-  body: state.pages.bildgalleri.body,
+  galleries: state.pages.imageGallery.galleries,
+  body: state.pages.imageGallery.body,
 });
 
-export default connect(mapStateToProps)(Bildgalleri);
+export default connect(mapStateToProps)(ImageGallery);

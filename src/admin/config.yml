@@ -9,51 +9,51 @@ collections:
     label: "Sidor"
     delete: false
     files:
-      - name: "hem"
+      - name: "home"
         label: "Hem"
-        file: "src/data/pages/hem.json"
+        file: "src/data/pages/home.json"
         extension: json
         format: json
         fields:
-          - {label: "Innehåll", name: "body", widget: "markdown"}
+          - {label: "Innehåll", name: "content", widget: "markdown"}
       - name: "program"
         label: "Program"
         file: "src/data/pages/program.json"
         extension: json
         format: json
         fields:
-          - {label: "Innehåll", name: "body", widget: "markdown"}
+          - {label: "Innehåll", name: "content", widget: "markdown"}
           - name: "items"
             label: "Program"
             widget: "list"
             fields:
               - {label: "Titel", name: "title", widget: "string"}
               - {label: "PDF", name: "pdf", widget: "file"}
-      - name: "bildgalleri"
+      - name: "image-gallery"
         label: "Bildgalleri"
         file: "src/data/pages/bildgalleri.json"
         extension: json
         format: json
         fields:
-          - {label: "Innehåll", name: "body", widget: "markdown"}
-          - name: "galleri"
+          - {label: "Innehåll", name: "content", widget: "markdown"}
+          - name: "galleries"
             label: "Galleri"
             widget: "list"
             fields:
               - {label: "Titel", name: "title", widget: "string"}
-              - name: "bilder"
+              - name: "images"
                 label: "Bilder"
                 widget: "list"
                 fields:
                   - {label: "Bild", name: "src", widget: "image"}
-      - name: "kontakta-oss"
+      - name: "contact"
         label: "Kontakta oss"
-        file: "src/data/pages/kontakta-oss.json"
+        file: "src/data/pages/contact.json"
         extension: json
         format: json
         fields:
+          - {label: "Innehåll", name: "content", widget: "markdown"}
           - {label: "Email", name: "email", widget: "string"}
-          - {label: "Innehåll", name: "body", widget: "markdown"}
   - name: "settings"
     label: "Inställningar"
     delete: false # Prevent users from deleting documents in this collection
@@ -67,5 +67,5 @@ collections:
         format: json
         description: "General Site Settings"
         fields:
-          - {label: "Webbplatsens titel", name: "site_title", widget: "string"}
-          - {label: "Webbplatsens beskrivning", name: "site_description", widget: "string"}
+          - {label: "Webbplatsens titel", name: "site-title", widget: "string"}
+          - {label: "Webbplatsens beskrivning", name: "site-description", widget: "string"}

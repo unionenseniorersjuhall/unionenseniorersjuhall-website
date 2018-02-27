@@ -2,10 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import CmsContent from '../components/cms-content';
 
-function Program({ body, program }) {
-  return Object.entries(program).map(([key, object]) => (
+function Program({ content, programs }) {
+  return Object.entries(programs).map(([key, object]) => (
     <div>
-      <CmsContent>{body}</CmsContent>
+      <CmsContent>{content}</CmsContent>
       <h3>{object.title}</h3>
       <a href={object.pdf} download>Ladda ner</a>
     </div>
@@ -13,8 +13,8 @@ function Program({ body, program }) {
 }
 
 const mapStateToProps = state => ({
-  program: state.pages.program.items,
-  body: state.pages.program.body,
+  programs: state.pages.program.items,
+  content: state.pages.program.content,
 });
 
 export default connect(mapStateToProps)(Program);
