@@ -1,1 +1,12 @@
-{}
+{
+  "body": "# Bildgalleri\n\nHär hittar du lite bilder från våra utflykter",
+  "galler": [
+    {
+      "title": "Utflykt till Abc",
+      "bilder": [
+        "/images/uploads/image1.png",
+        "/images/uploads/test.png"
+      ]
+    }
+  ]
+}
