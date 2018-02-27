@@ -36,7 +36,7 @@ collections:
         format: json
         fields:
           - {label: "Innehåll", name: "body", widget: "markdown"}
-          - name: "galler"
+          - name: "galleri"
             label: "Galleri"
             widget: "list"
             fields:
@@ -44,7 +44,8 @@ collections:
               - name: "bilder"
                 label: "Bilder"
                 widget: "list"
-                field: {label: "Bild", name: "src", widget: "image"}
+                fields:
+                  - {label: "Bild", name: "src", widget: "image"}
       - name: "kontakta-oss"
         label: "Kontakta oss"
         file: "src/data/pages/kontakta-oss.json"
