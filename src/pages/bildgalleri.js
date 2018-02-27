@@ -6,7 +6,7 @@ function Bildgalleri({ galleries }) {
     <div>
       <h3>{object.title}</h3>
       {object.bilder.map(img => (
-        <img key={img.image} src={img.image} />
+        <img key={img.src} src={img.src} />
       ))}
     </div>
   ));
