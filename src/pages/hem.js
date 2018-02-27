@@ -7,7 +7,7 @@ function Hem({ body }) {
 }
 
 const mapStateToProps = state => ({
-  body: state.hem.data.body,
+  body: state.pages.hem.body,
 });
 
 export default connect(mapStateToProps)(Hem);
