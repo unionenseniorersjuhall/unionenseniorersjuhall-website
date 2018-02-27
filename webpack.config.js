@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const getPreloadedState = require('./get-preloaded-state');
+const getData = require('./get-data');
 
 module.exports = {
   entry: './src/index.js',
@@ -40,7 +40,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html',
-      preloadedState: getPreloadedState(),
+      preloadedState: getData(path.join(__dirname, './src/data')),
       title: 'Unionen Seniorer Sjuhall',
     }),
     new ExtractTextPlugin('styles.css'),
