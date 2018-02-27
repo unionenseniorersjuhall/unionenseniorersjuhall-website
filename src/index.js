@@ -8,7 +8,7 @@ import PageWrapper from './components/page-wrapper';
 import NotFound from './components/not-found';
 import Home from './pages/home';
 import Program from './pages/program';
-import imageGallery from './pages/image-gallery';
+import ImageGallery from './pages/image-gallery';
 import Contact from './pages/contact';
 
 import './assets/styles/index.css';
