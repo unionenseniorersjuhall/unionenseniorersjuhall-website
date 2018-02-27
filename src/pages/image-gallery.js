@@ -5,7 +5,7 @@ function ImageGallery({ galleries }) {
   return Object.entries(galleries).map(([key, object]) => (
     <div>
       <h3>{object.title}</h3>
-      {object.bilder.map(img => (
+      {object.images.map(img => (
         <img key={img.src} src={img.src} />
       ))}
     </div>
