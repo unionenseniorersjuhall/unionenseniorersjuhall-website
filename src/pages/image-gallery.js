@@ -10,7 +10,7 @@ function ImageGallery({ content, galleries }) {
         <div key={key}>
           <h3>{object.title}</h3>
           {object.images.map(img => (
-            <img key={img.src} src={img.src} />
+            <img style={{ maxWidth: '150px' }} key={img.src} src={img.src} />
           ))}
         </div>
       ))}
