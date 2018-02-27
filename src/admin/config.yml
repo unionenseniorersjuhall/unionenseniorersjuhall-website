@@ -31,7 +31,7 @@ collections:
               - {label: "PDF", name: "pdf", widget: "file"}
       - name: "image-gallery"
         label: "Bildgalleri"
-        file: "src/data/pages/bildgalleri.json"
+        file: "src/data/pages/image-gallery.json"
         extension: json
         format: json
         fields:
