@@ -54,73 +54,18 @@ collections:
         fields:
           - {label: "Email", name: "email", widget: "string"}
           - {label: "Innehåll", name: "body", widget: "markdown"}
-  - name: "hem" # Used in routes, e.g., /admin/collections/blog
-    label: "Hem" # Used in the UI
-    delete: false # Prevent users from deleting documents in this collection
-    files:
-      - name: "hem"
-        label: "Hem"
-        file: "src/data/hem/data.json" # The path to the folder where the documents are stored
-        extension: json
-        format: json
-        fields: # The fields for each document, usually in front matter
-          - {label: "Text", name: "body", widget: "markdown"}
-  - name: "program" # Used in routes, e.g., /admin/collections/blog
-    label: "Program" # Used in the UI
-    folder: "src/data/program" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: json
-    format: json
-    fields:
-      - {label: "Titel", name: "title", widget: "string"}
-      - {label: "PDF", name: "file", widget: "file"}
-  - name: "bildgalleri" # Used in routes, e.g., /admin/collections/blog
-    label: "Bildgalleri" # Used in the UI
-    folder: "src/data/bildgalleri" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: json
-    format: json
-    fields:
-      - {label: "Titel", name: "title", widget: "string"}
-      - label: "Bilder"
-        name: "bilder"
-        widget: "list"
-        field: {label: "Bild", name: "image", widget: "image"}
-  - name: "kontakta-oss" # Used in routes, e.g., /admin/collections/blog
-    label: "Kontakta Oss" # Used in the UI
-    delete: false # Prevent users from deleting documents in this collection
-    files:
-      - name: "kontakta-oss"
-        label: "Kontakta Oss"
-        file: "src/data/kontakta-oss/data.json" # The path to the folder where the documents are stored
-        extension: json
-        format: json
-        fields: # The fields for each document, usually in front matter
-          - {label: "Titel", name: "title", widget: "string"}
-          - {label: "Text", name: "body", widget: "markdown"}
-  - name: "page" # Used in routes, e.g., /admin/collections/blog
-    label: "Page" # Used in the UI
-    folder: "src/data/pages" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    extension: json
-    format: json
-    fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
   - name: "settings"
-    label: "Settings"
+    label: "Inställningar"
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: false
     files:
       - name: "general"
-        label: "General"
+        label: "Generellt"
         file: "src/data/settings/general.json"
         extension: json
         format: json
         description: "General Site Settings"
         fields:
-          - {label: "Website title", name: "site_title", widget: "string"}
+          - {label: "Webbplatsens titel", name: "site_title", widget: "string"}
+          - {label: "Webbplatsens beskrivning", name: "site_description", widget: "string"}
