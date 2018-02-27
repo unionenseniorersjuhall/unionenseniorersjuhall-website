@@ -1,10 +1,10 @@
 .image-gallery {
-  max-width: 600px;
-  display: flex;
-  flex-wrap: wrap;
+  max-width: 620px;
   margin: 0 auto;
 }
 
 .image-gallery__item {
-  flex: 0 0 150px;
+  display: inline-block;
+  max-width: 150px;
+  margin: 0 10px 10px;
 }
