@@ -36,8 +36,8 @@ collections:
         format: json
         fields:
           - {label: "Innehåll", name: "body", widget: "markdown"}
-          - name: "bilder"
-            label: "Bilder"
+          - name: "galler"
+            label: "Galleri"
             widget: "list"
             fields:
               - {label: "Titel", name: "title", widget: "string"}
