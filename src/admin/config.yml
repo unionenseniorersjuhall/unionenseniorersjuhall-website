@@ -29,9 +29,9 @@ collections:
             fields:
               - {label: "Titel", name: "title", widget: "string"}
               - {label: "PDF", name: "pdf", widget: "file"}
-      - name: "image-gallery"
+      - name: "imageGallery"
         label: "Bildgalleri"
-        file: "src/data/pages/image-gallery.json"
+        file: "src/data/pages/imageGallery.json"
         extension: json
         format: json
         fields:
