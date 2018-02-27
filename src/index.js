@@ -23,7 +23,7 @@ const App = (
           <Route exact path="/" component={Home} />
           <Route exact path="/program" component={Program} />
           <Route exact path="/bildgalleri" component={ImageGallery} />
-          <Route exact path="/kontakta-oss" render={Contact} />
+          <Route exact path="/kontakta-oss" component={Contact} />
           <Route component={NotFound} />
         </Switch>
       </PageWrapper>
