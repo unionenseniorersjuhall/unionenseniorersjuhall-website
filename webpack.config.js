@@ -12,6 +12,7 @@ module.exports = {
   },
   devServer: {
     open: true,
+    historyApiFallback: true,
     contentBase: './dist',
   },
   module: {
@@ -23,9 +24,9 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: 'css-loader'
-        })
+        use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
+          use: 'css-loader',
+        })),
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
