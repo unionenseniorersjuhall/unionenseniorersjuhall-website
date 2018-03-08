@@ -18,5 +18,12 @@
 }
 
 .navigation__link:hover {
+  background-color: transparent;
   background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4));
+}
+
+.navigation__link.active {
+  background-image: none;
+  background-color: #FFFFFF;
+  color: #000000;
 }
