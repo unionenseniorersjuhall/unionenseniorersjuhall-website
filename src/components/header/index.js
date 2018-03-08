@@ -11,8 +11,8 @@ export default function Header() {
           <img className="header__logo" src={logo} alt="Unionen Seniorer Sjuhall" />
           <h2 className="header__logo-text">Seniorer Sjuhall</h2>
         </Link>
-        <Navigation />
       </div>
+      <Navigation />
     </header>
   );
 }

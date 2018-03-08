@@ -1,21 +1,22 @@
 .navigation {
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.3));
+}
 
+.navigation__inner {
+  max-width: 820px;
+  margin: 0 auto;
+  border-left: 1px solid rgba(0,0,0,0.1);
 }
 
 .navigation__link {
   display: inline-block;
-  margin: 5px;
-  padding: 5px;
+  padding: 10px 20px;
   color: #FFFFFF;
   text-decoration: none;
-  border-bottom: 2px solid transparent;
+  font-size: 18px;
+  border-right: 1px solid rgba(0,0,0,0.1);
 }
 
 .navigation__link:hover {
-  border-bottom-color: #FFFFFF;
-}
-
-.navigation__link:first-child {
-  margin-left: 0;
-  padding-left: 0;
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4));
 }
