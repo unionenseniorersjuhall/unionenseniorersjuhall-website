@@ -3,13 +3,15 @@ import { connect } from 'react-redux';
 import CmsContent from '../components/cms-content';
 
 function Program({ content, programs }) {
-  return Object.entries(programs).map(([key, object]) => (
-    <div>
-      <CmsContent>{content}</CmsContent>
-      <h3>{object.title}</h3>
-      <a href={object.pdf} download>Ladda ner</a>
-    </div>
-  ));
+  return (
+    <ul>
+      {Object.entries(programs).map(([key, object]) => (
+        <li>
+          <h3><a href={object.pdf} download>{object.title}</a></h3>
+        </li>
+      ))}
+    </ul>
+  )
 }
 
 const mapStateToProps = state => ({
