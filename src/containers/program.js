@@ -1,17 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import CmsContent from '../components/cms-content';
+import FileList from '../components/file-list';
 
 function Program({ content, programs }) {
-  return (
-    <ul>
-      {Object.entries(programs).map(([key, object]) => (
-        <li>
-          <h3><a href={object.pdf} download>{object.title}</a></h3>
-        </li>
-      ))}
-    </ul>
-  )
+  return [
+    <CmsContent key="1">{content}</CmsContent>,
+    <FileList key="2" files={programs} />
+  ]
 }
 
 const mapStateToProps = state => ({

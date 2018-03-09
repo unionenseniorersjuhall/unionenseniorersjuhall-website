@@ -1,0 +1,15 @@
+.file-list {
+}
+
+.file-list__item {
+  position: relative;
+  margin-left: 30px;
+}
+
+.file-list__item::before {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  color: #111111;
+  content: "\25b6";
+}
