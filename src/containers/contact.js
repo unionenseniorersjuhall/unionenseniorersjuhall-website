@@ -6,6 +6,20 @@ function Contact({ content }) {
   return (
     <div>
       <CmsContent>{content}</CmsContent>
+      <form name="contact" method="POST" netlify>
+        <p>
+          <label>Ditt namn: <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Din Email: <input type="email" name="email" /></label>
+        </p>
+        <p>
+          <label>Meddelande: <textarea name="message" /></label>
+        </p>
+        <p>
+          <button type="submit">Skicka</button>
+        </p>
+      </form>
       <input type="text" placeholder="test" />
     </div>
   );
