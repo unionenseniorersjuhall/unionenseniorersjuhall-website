@@ -1,0 +1,17 @@
+.text-input {
+  width: 100%;
+}
+
+.text-input__label {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.text-input__input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #444444;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}

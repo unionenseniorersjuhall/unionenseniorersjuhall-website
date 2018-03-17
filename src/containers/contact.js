@@ -1,27 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import CmsContent from '../components/cms-content';
+import TextInput from '../components/text-input';
+import Textarea from '../components/textarea';
+import SubmitButton from '../components/submit-button';
 
 function Contact({ content }) {
   return (
     <div>
       <CmsContent>{content}</CmsContent>
-      <form name="contact" method="POST" netlify>
-        <input type="hidden" name="form-name" value="contact" /> {/* for netlify, see forms.html */}
-        <p>
-          <label>Ditt namn: <input type="text" name="name" /></label>
-        </p>
-        <p>
-          <label>Din Email: <input type="email" name="email" /></label>
-        </p>
-        <p>
-          <label>Meddelande: <textarea name="message" /></label>
-        </p>
-        <p>
-          <button type="submit">Skicka</button>
-        </p>
+      <form name="contact" method="POST" data-netlify="true">
+        <TextInput hidden name="form-name" value="contact" /> {/* for netlify, see forms.html */}
+        <TextInput name="name" label="Namn" />
+        <TextInput name="email" label="Email" />
+        <Textarea name="message" label="Ditt meddelande" />
+        <SubmitButton>Skicka</SubmitButton>
       </form>
-      <input type="text" placeholder="test" />
     </div>
   );
 }

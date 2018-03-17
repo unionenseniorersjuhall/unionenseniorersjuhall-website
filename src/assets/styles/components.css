@@ -12,3 +12,6 @@
 @import "../../components/image/index.css";
 @import "../../components/image-gallery/index.css";
 @import "../../components/file-list/index.css";
+@import "../../components/text-input/index.css";
+@import "../../components/textarea/index.css";
+@import "../../components/submit-button/index.css";

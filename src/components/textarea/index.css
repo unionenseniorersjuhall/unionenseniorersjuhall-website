@@ -1,0 +1,18 @@
+.textarea {
+  width: 100%;
+}
+
+.textarea__label {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.textarea__input {
+  display: block;
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid #444444;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 15px;
+}
