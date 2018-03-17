@@ -49,6 +49,7 @@ module.exports = {
       { from: 'admin/**', context: 'src/' },
       { from: 'uploads/**', to: 'images/', context: 'src/assets/' },
       { from: '_redirects' },
+      { from: 'src/forms.html' },
     ], { copyUnmodified: true }),
   ],
 };
