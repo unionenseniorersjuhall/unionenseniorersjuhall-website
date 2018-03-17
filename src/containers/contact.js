@@ -7,6 +7,7 @@ function Contact({ content }) {
     <div>
       <CmsContent>{content}</CmsContent>
       <form name="contact" method="POST" netlify>
+        <input type="hidden" name="form-name" value="contact" /> {/* for netlify, see forms.html */}
         <p>
           <label>Ditt namn: <input type="text" name="name" /></label>
         </p>
