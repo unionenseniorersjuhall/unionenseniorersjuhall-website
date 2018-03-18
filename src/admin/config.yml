@@ -68,3 +68,16 @@ collections:
         fields:
           - {label: "Webbplatsens titel", name: "site-title", widget: "string"}
           - {label: "Webbplatsens beskrivning", name: "site-description", widget: "string"}
+  - name: "gallery"
+    label: "Bildgalleri"
+    slug: "{{slug}}"
+    folder: "src/data/gallery"
+    extension: json
+    format: json
+    fields:
+      - {label: "Titel", name: "title", widget: "string"}
+      - name: "images"
+        label: "Bilder"
+        widget: "list"
+        fields:
+          - {label: "Bild", name: "src", widget: "image"}
