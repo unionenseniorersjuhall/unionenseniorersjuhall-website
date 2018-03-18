@@ -1,4 +1,11 @@
 {
   "title": "Dagsutflykt till Hong Kong",
-  "images": []
+  "images": [
+    {
+      "src": "/images/uploads/image1.png"
+    },
+    {
+      "src": "/images/uploads/test.png"
+    }
+  ]
 }
