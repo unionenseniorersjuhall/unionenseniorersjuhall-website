@@ -5,15 +5,16 @@
 .textarea__label {
   display: block;
   margin-bottom: 3px;
+  font-size: 16px;
 }
 
 .textarea__input {
   display: block;
   width: 100%;
   min-height: 300px;
-  border: 1px solid #444444;
-  border-radius: 5px;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;
   padding: 5px;
-  margin-bottom: 15px;
-  font-size: 18px;
+  margin-bottom: 20px;
+  font-size: 16px;
 }

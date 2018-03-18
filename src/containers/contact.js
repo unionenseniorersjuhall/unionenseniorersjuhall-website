@@ -4,18 +4,18 @@ import CmsContent from '../components/cms-content';
 import TextInput from '../components/text-input';
 import Textarea from '../components/textarea';
 import SubmitButton from '../components/submit-button';
+import Form from '../components/form';
 
 function Contact({ content }) {
   return (
     <div>
       <CmsContent>{content}</CmsContent>
-      <form name="contact" method="POST" data-netlify="true">
-        <TextInput hidden name="form-name" value="contact" /> {/* for netlify, see forms.html */}
-        <TextInput name="name" label="Namn" />
-        <TextInput name="email" label="Email" />
-        <Textarea name="message" label="Ditt meddelande" />
+      <Form name="contact">
+        <TextInput name="name" label="Namn" required />
+        <TextInput name="email" label="E-post" required />
+        <Textarea name="message" label="Ditt meddelande" required />
         <SubmitButton>Skicka</SubmitButton>
-      </form>
+      </Form>
     </div>
   );
 }
