@@ -6,6 +6,12 @@
     },
     {
       "src": "/images/uploads/test.png"
+    },
+    {
+      "src": "/images/uploads/test.jpg"
+    },
+    {
+      "src": "/images/uploads/placeholder.png"
     }
   ]
 }
