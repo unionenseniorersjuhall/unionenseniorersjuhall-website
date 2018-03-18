@@ -11,6 +11,7 @@ function Contact({ content }) {
     <div>
       <CmsContent>{content}</CmsContent>
       <Form name="contact">
+        <h2>Kontakta oss</h2>
         <TextInput name="name" label="Namn" required />
         <TextInput name="email" label="E-post" email required />
         <Textarea name="message" label="Ditt meddelande" required />
