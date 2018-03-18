@@ -1,0 +1,14 @@
+.navigation-secondary {
+  padding: 10px;
+  text-align: right;
+}
+
+.navigation-secondary__link {
+  color: #FFFFFF;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.navigation-secondary__link:hover {
+  text-decoration: underline;
+}

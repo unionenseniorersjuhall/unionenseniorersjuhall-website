@@ -2,24 +2,24 @@ import React from 'react';
 import { connect } from 'react-redux';
 import CmsContent from '../components/cms-content';
 import ImageGallery from '../components/image-gallery';
+import Teaser from '../components/teaser';
 
-function Gallery({ content, galleries }) {
+function Gallery({ content, gallery }) {
   return (
-    <div>
-      <CmsContent>{content}</CmsContent>
-      {Object.entries(galleries).map(([key, object]) => (
-        <div key={key}>
-          <h3>{object.title}</h3>
-          <ImageGallery images={object.images} />
-        </div>
+    <div style={{ display: 'flex' }}>
+      {Object.entries(gallery).map(([key, object]) => (
+        <Teaser key={key} src={object.images[0].src} title={object.title} subTitle={`${object.images.length} bilder`} />
       ))}
+      {/*<div key={key}>
+        <h3>{object.title}</h3>
+        <ImageGallery images={object.images} />
+    </div>*/}
     </div>
   );
 }
 
 const mapStateToProps = state => ({
-  galleries: state.pages.imageGallery.galleries,
-  content: state.pages.imageGallery.content,
+  gallery: state.gallery,
 });
 
 export default connect(mapStateToProps)(Gallery);
