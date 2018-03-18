@@ -80,4 +80,5 @@ collections:
       - name: "images"
         label: "Bilder"
         widget: "list"
-        field: {label: "Bild", name: "src", widget: "image"}
+        fields:
+          - {label: "Bild", name: "src", widget: "image"}
