@@ -12,7 +12,7 @@ function Contact({ content }) {
       <CmsContent>{content}</CmsContent>
       <Form name="contact">
         <TextInput name="name" label="Namn" required />
-        <TextInput name="email" label="E-post" required />
+        <TextInput name="email" label="E-post" email required />
         <Textarea name="message" label="Ditt meddelande" required />
         <SubmitButton>Skicka</SubmitButton>
       </Form>

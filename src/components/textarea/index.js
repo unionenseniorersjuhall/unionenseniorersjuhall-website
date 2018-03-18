@@ -16,16 +16,20 @@ class Textarea extends Component {
   }
 
   render() {
-    const { label, name } = this.props;
+    const { label, name, required } = this.props;
     const { value } = this.state;
 
     return (
       <div className="textarea">
         <label className="textarea__label">{label}</label>
-        <textarea className="textarea__input" name={name} value={value} onChange={this.handleChange} />
+        <textarea className="textarea__input" name={name} value={value} onChange={this.handleChange} required={required} />
       </div>
     );
   }
 }
+
+Textarea.defaultProps = {
+  required: false,
+};
 
 export default Textarea;

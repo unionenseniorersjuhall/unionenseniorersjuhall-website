@@ -18,19 +18,17 @@ class TextInput extends Component {
   }
 
   validate(e) {
-    if (this.props.required && this.state.value.length < 1) {
-      this.setState({ error: 'Detta fält är obligatoriskt' });
-    }
+
   }
 
   render() {
-    const { label, name, hidden } = this.props;
+    const { label, name, hidden, required, email } = this.props;
     const value = this.props.value !== '' ? this.props.value : this.state.value;
 
     return (
       <div className={`text-input${hidden ? ' hidden' : ''}`}>
         <label className="text-input__label">{label}</label>
-        <input className="text-input__input" type={hidden ? 'hidden' : 'text'} name={name} value={value} onChange={this.handleChange} onBlur={this.validate} />
+        <input className="text-input__input" type={email ? 'email' : hidden ? 'hidden' : 'text'} name={name} value={value} onChange={this.handleChange} required={required} />
         {this.state.error.length > 0 && (
           <span className="text-input__error">{this.state.error}</span>
         )}
@@ -43,6 +41,7 @@ TextInput.defaultProps = {
   value: '',
   required: false,
   hidden: false,
+  email: false,
 };
 
 export default TextInput;
