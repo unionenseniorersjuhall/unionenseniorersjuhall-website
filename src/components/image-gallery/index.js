@@ -1,16 +1,16 @@
 import React from 'react';
-import Image from '../image';
 
-function ImageGallery({ images }) {
+function ImageGallery({ images, title }) {
   return (
-    <ul className="image-gallery">
+    <div className="image-gallery">
+      <h1 className="image-gallery__title">{title}</h1>
       {images.map(image => (
-        <li key={image.src} className="image-gallery__item">
-          <Image src={image.src} alt={image.alt} />
-        </li>
+        <div className="image-gallery__item" key={image.src}>
+          <img className="image-gallery__image" src={image.src} alt="" />
+        </div>
       ))}
-    </ul>
-  );
+    </div>
+  )
 }
 
 export default ImageGallery;

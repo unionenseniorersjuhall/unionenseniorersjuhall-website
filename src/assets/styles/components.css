@@ -10,6 +10,7 @@
 @import "../../components/h2/index.css";
 @import "../../components/h3/index.css";
 @import "../../components/image/index.css";
+@import "../../components/teaser-list/index.css";
 @import "../../components/image-gallery/index.css";
 @import "../../components/file-list/index.css";
 @import "../../components/text-input/index.css";
@@ -19,3 +20,4 @@
 @import "../../components/download-button/index.css";
 @import "../../components/navigation-secondary/index.css";
 @import "../../components/teaser/index.css";
+@import "../../components/link/index.css";
