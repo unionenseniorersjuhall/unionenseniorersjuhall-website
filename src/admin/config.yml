@@ -29,23 +29,6 @@ collections:
             fields:
               - {label: "Titel", name: "title", widget: "string"}
               - {label: "PDF", name: "pdf", widget: "file"}
-      - name: "imageGallery"
-        label: "Bildgalleri"
-        file: "src/data/pages/imageGallery.json"
-        extension: json
-        format: json
-        fields:
-          - {label: "Innehåll", name: "content", widget: "markdown"}
-          - name: "galleries"
-            label: "Galleri"
-            widget: "list"
-            fields:
-              - {label: "Titel", name: "title", widget: "string"}
-              - name: "images"
-                label: "Bilder"
-                widget: "list"
-                fields:
-                  - {label: "Bild", name: "src", widget: "image"}
       - name: "contact"
         label: "Kontakta oss"
         file: "src/data/pages/contact.json"
