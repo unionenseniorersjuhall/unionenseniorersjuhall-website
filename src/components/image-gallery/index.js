@@ -7,7 +7,7 @@ function ImageGallery({ images, title }) {
       <ul className="image-gallery__images">
         {images.map(image => (
           <li className="image-gallery__item" key={image.src}>
-            <img className="image-gallery__image" src={image.src} alt="" />
+            <img className="image-gallery__image" src={image.src.replace('.png', '_small.png').replace('.jpg', '_small.jpg')} alt="" />
           </li>
         ))}
       </ul>

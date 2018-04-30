@@ -58,3 +58,6 @@ typings/
 .env
 
 dist/
+
+src/assets/uploads/*_small.*
+src/assets/uploads/*_large.*
