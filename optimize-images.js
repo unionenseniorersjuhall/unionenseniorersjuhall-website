@@ -16,7 +16,7 @@ images.forEach((image) => {
   Jimp.read(image)
     .then((tempImage) => {
       tempImage
-        .resize(Jimp.AUTO, 250)
+        .resize(Jimp.AUTO, 100)
         .write(image.replace('.jpg', '_small.jpg').replace('.png', '_small.png'));
     })
     .catch((error) => {

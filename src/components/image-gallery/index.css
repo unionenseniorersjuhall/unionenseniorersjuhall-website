@@ -1,5 +1,6 @@
 .image-gallery__image {
-  width: 150px;
+  width: 240px;
+  margin: 10px;
 }
 
 .image-gallery__images {

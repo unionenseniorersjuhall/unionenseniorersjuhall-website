@@ -1,18 +1,14 @@
 import React from 'react';
+import ReactImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
 
-function ImageGallery({ images, title }) {
-  return (
-    <div className="image-gallery">
-      <h1 className="image-gallery__title">{title}</h1>
-      <ul className="image-gallery__images">
-        {images.map(image => (
-          <li className="image-gallery__item" key={image.src}>
-            <img className="image-gallery__image" src={image.src.replace('.png', '_small.png').replace('.jpg', '_small.jpg')} alt="" />
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
+function ImageGallery(props) {
+  const images = props.images.map((image) => ({
+    original: image.src.replace('.png', '_large.png').replace('.jpg', '_large.jpg'),
+    thumbnail: image.src.replace('.png', '_small.png').replace('.jpg', '_small.jpg'),
+  }));
+
+  return <ReactImageGallery items={images} />;
 }
 
 export default ImageGallery;

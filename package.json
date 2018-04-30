@@ -4,7 +4,7 @@
   "private": true,
   "description": "Website of Unionen Seniorer Sjuhall",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline",
+    "start": "node ./optimize-images.js && webpack-dev-server --hot --inline",
     "build": "node ./optimize-images.js && webpack -p"
   },
   "devDependencies": {
@@ -27,6 +27,7 @@
     "jimp": "^0.2.28",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-image-gallery": "^0.8.7",
     "react-markdown": "^3.2.2",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
