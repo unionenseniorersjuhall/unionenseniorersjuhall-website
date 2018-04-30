@@ -60,4 +60,5 @@ typings/
 dist/
 
 src/assets/uploads/*_small.*
+src/assets/uploads/*_medium.*
 src/assets/uploads/*_large.*

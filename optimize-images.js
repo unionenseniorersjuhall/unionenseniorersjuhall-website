@@ -25,6 +25,15 @@ images.forEach((image) => {
   Jimp.read(image)
     .then((tempImage) => {
       tempImage
+        .resize(400, Jimp.AUTO)
+        .write(image.replace('.jpg', '_medium.jpg').replace('.png', '_medium.png'));
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  Jimp.read(image)
+    .then((tempImage) => {
+      tempImage
         .resize(1200, Jimp.AUTO)
         .write(image.replace('.jpg', '_large.jpg').replace('.png', '_large.png'));
     })

@@ -1,14 +1,14 @@
 .teaser {
   display: inline-block;
-  flex: 0 0 300px;
-  height: 200px;
+  flex: 0 0 370px;
+  height: 250px;
   text-decoration: none;
   margin-right: 20px;
 }
 
 .teaser__image {
   position: relative;
-  height: 150px;
+  height: 200px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
