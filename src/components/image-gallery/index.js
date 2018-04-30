@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactImageGallery from 'react-image-gallery';
+import { Link } from 'react-router-dom';
 import 'react-image-gallery/styles/css/image-gallery.css';
 
 function ImageGallery(props) {
@@ -8,7 +9,14 @@ function ImageGallery(props) {
     thumbnail: image.src.replace('.png', '_small.png').replace('.jpg', '_small.jpg'),
   }));
 
-  return <ReactImageGallery items={images} />;
+  return (
+    <div>
+      <div style={{ marginBottom: '20px' }}>
+        <Link to="/bildgalleri">Tillbaka</Link>
+      </div>
+      <ReactImageGallery items={images} />
+    </div>
+  );
 }
 
 export default ImageGallery;
