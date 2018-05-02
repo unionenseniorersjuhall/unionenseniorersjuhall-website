@@ -8,6 +8,7 @@ export default function Navigation() {
         <NavLink className="navigation__link" exact to="/">Hem</NavLink>
         <NavLink className="navigation__link" exact to="/program">Program</NavLink>
         <NavLink className="navigation__link" exact to="/bildgalleri">Bildgalleri</NavLink>
+        <NavLink className="navigation__link" exact to="/styrelse">Styrelse</NavLink>
         <NavLink className="navigation__link" exact to="/kontakta-oss">Kontakta oss</NavLink>
       </div>
     </nav>
