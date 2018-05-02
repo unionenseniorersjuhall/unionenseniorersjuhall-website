@@ -11,6 +11,7 @@ import Program from './containers/program';
 import Gallery from './containers/gallery';
 import Contact from './containers/contact';
 import GalleryDetail from './containers/gallery-detail';
+import Styrelse from './containers/styrelse';
 
 import './assets/styles/index.css';
 
@@ -25,6 +26,7 @@ const App = (
           <Route exact path="/program" component={Program} />
           <Route exact path="/bildgalleri" component={Gallery} />
           <Route exact path="/kontakta-oss" component={Contact} />
+          <Route exact path="/styrelse" component={Styrelse} />
           <Route path="/bildgalleri/:slug" component={GalleryDetail} />
           <Route component={NotFound} />
         </Switch>

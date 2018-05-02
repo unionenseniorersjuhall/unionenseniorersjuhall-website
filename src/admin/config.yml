@@ -36,6 +36,13 @@ collections:
         format: json
         fields:
           - {label: "Innehåll", name: "content", widget: "markdown"}
+      - name: "styrelse"
+        label: "Styrelse"
+        file: "src/data/pages/styrelse.json"
+        extension: json
+        format: json
+        fields:
+          - {label: "Innehåll", name: "content", widget: "markdown"}
   - name: "settings"
     label: "Inställningar"
     delete: false # Prevent users from deleting documents in this collection
