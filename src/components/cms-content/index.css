@@ -1,3 +1,5 @@
-.cms-content {
-
+.cms-content li {
+  margin-left: 15px;
+  list-style-type: disc;
+  line-height: 24px;
 }
