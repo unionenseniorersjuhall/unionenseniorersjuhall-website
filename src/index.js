@@ -9,6 +9,7 @@ import NotFound from './components/not-found';
 import Home from './containers/home';
 import Program from './containers/program';
 import Gallery from './containers/gallery';
+import Information from './containers/information';
 import Contact from './containers/contact';
 import GalleryDetail from './containers/gallery-detail';
 import Styrelse from './containers/styrelse';
@@ -26,6 +27,7 @@ const App = (
           <Route exact path="/program" component={Program} />
           <Route exact path="/bildgalleri" component={Gallery} />
           <Route exact path="/kontakta-oss" component={Contact} />
+          <Route exact path="/information" component={Information} />
           <Route exact path="/styrelse" component={Styrelse} />
           <Route path="/bildgalleri/:slug" component={GalleryDetail} />
           <Route component={NotFound} />
